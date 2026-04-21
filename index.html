@@ -244,9 +244,7 @@
     margin-top: 64px;
   }
 
-  .about-image {
-    position: relative;
-  }
+  .about-image { position: relative; }
 
   .about-image img {
     width: 100%;
@@ -280,11 +278,7 @@
     margin-top: 36px;
   }
 
-  .pillar {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-  }
+  .pillar { display: flex; align-items: flex-start; gap: 16px; }
 
   .pillar-icon {
     width: 42px;
@@ -342,9 +336,7 @@
     display: block;
   }
 
-  .product-body {
-    padding: 28px;
-  }
+  .product-body { padding: 28px; }
 
   .product-category {
     font-size: 10px;
@@ -399,7 +391,6 @@
   }
 
   .focus-text { max-width: 560px; }
-
   .focus-text .section-title { color: var(--white); }
 
   .focus-text p {
@@ -534,9 +525,7 @@
 
   .form-group input:focus,
   .form-group select:focus,
-  .form-group textarea:focus {
-    border-color: var(--gold);
-  }
+  .form-group textarea:focus { border-color: var(--gold); }
 
   .form-group textarea { resize: vertical; min-height: 100px; }
 
@@ -619,10 +608,7 @@
     gap: 12px;
   }
 
-  .footer-bottom p {
-    font-size: 13px;
-    color: rgba(255,255,255,0.35);
-  }
+  .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.35); }
 
   .footer-bottom a {
     color: var(--gold);
@@ -649,29 +635,21 @@
   }
 
   .wa-float:hover { transform: scale(1.08); }
-
   .wa-float svg { width: 28px; height: 28px; fill: white; }
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
     nav { padding: 0 4%; }
     .nav-links { display: none; }
-
     section { padding: 64px 4%; }
-
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .about-image img { height: 320px; }
-
     .products-grid { grid-template-columns: 1fr; }
-
     .contact-wrap { grid-template-columns: 1fr; gap: 40px; }
     .contact-form { padding: 28px; }
     .form-grid { grid-template-columns: 1fr; }
-
     .footer-top { grid-template-columns: 1fr; gap: 32px; }
-
     .focus-banner { flex-direction: column; }
-
     .stats-bar { gap: 24px; }
   }
 
@@ -687,7 +665,8 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <img src="./Logo.png" alt="Svarna Mercantile" style="height:44px;object-fit:contain;max-width:200px">
+    <img src="./Logo.png" alt="Svarna Mercantile" style="height:44px;object-fit:contain;max-width:200px" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div style="display:none;font-family:'Playfair Display',serif;font-size:20px;color:var(--dark);font-weight:600;">Svarna Mercantile</div>
   </div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -796,9 +775,9 @@
     <p class="section-sub">We keep our catalog focused so we can ensure the highest consistency across every shipment we dispatch.</p>
 
     <div class="products-grid">
-      <!-- Air Filter -->
+      <!-- Air Filter — FIXED URL -->
       <div class="product-card">
-        <img class="product-image" src="https://images.unsplash.com/photo-1614026480418-bd11fdb9fa39?w=600&q=80" alt="Air Filter">
+        <img class="product-image" src="https://images.unsplash.com/photo-1623091411395-09e79fdbfcf8?w=600&q=80" alt="Air Filter">
         <div class="product-body">
           <div class="product-category">Two-Wheeler Focus</div>
           <h3>Air Filters</h3>
@@ -809,7 +788,7 @@
         </div>
       </div>
 
-      <!-- Oil Filter -->
+      <!-- Oil Filter — URL unchanged (was working) -->
       <div class="product-card">
         <img class="product-image" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Oil Filter">
         <div class="product-body">
@@ -822,9 +801,9 @@
         </div>
       </div>
 
-      <!-- Spark Plug -->
+      <!-- Spark Plug — FIXED URL -->
       <div class="product-card">
-        <img class="product-image" src="https://images.unsplash.com/photo-1617886903355-9354bb57751f?w=600&q=80" alt="Spark Plug">
+        <img class="product-image" src="https://images.unsplash.com/photo-1606577924006-27d39b132ae2?w=600&q=80" alt="Spark Plug">
         <div class="product-body">
           <div class="product-category">Cars &amp; Two-Wheelers</div>
           <h3>Spark Plugs</h3>
@@ -961,7 +940,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <img src="./Logo.png" alt="Svarna Mercantile" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <div style="display:block;font-family:'Playfair Display',serif;font-size:22px;color:var(--gold);font-weight:600;">Svarna Mercantile</div>
+        <div style="display:none;font-family:'Playfair Display',serif;font-size:22px;color:var(--gold);font-weight:600;">Svarna Mercantile</div>
         <p>Global exporter of precision auto parts. Focused. Reliable. Built for distributors worldwide.</p>
       </div>
       <div class="footer-col">
@@ -995,17 +974,6 @@
 </a>
 
 <script>
-  const LOGO_B64 = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAH0KADAAQAAAABAAAH0AAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+";
-
-  document.querySelectorAll('.nav-logo img, .footer-brand img').forEach(img => {
-    img.src = '/mnt/user-data/uploads/Geometric_Logo_for__Svarna__with_Cogwheel_Emblem.png';
-    img.onerror = function() {
-      this.style.display = 'none';
-      const next = this.nextElementSibling;
-      if (next) next.style.display = 'block';
-    };
-  });
-
   function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
@@ -1029,13 +997,6 @@
       document.getElementById('formSuccess').style.display = 'none';
     }, 5000);
   }
-
-  const waLinks = document.querySelectorAll('a[href*="wa.me/919380969712"]');
-  waLinks.forEach(link => {
-    const msg = link.href.split('?text=')[1] || '';
-    link.addEventListener('click', (e) => {
-    });
-  });
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
